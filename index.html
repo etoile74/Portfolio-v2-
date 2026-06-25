@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Landru Elliott"/>
+  <meta name="description" content="Portfolio de LANDRU Elliott"/>
+  <meta name="keywords" content="Elliott Landru, portfolio, développeur web, HTML, CSS, JavaScript, Python, réseaux, informatique, services web, ingénieur informatique" />
+  <meta name="open graph data" content="website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script defer src="./js/main.js"></script>
+  <title>Portfolio</title>
+  <link rel="icon" href="./img/favicon.svg" type="img/svg">
+</head>
+<body>
+  
+  <div class="loader" id="page-loader">
+    <h1 class="loader__title">Portfolio LANDRU Elliott</h1>
+    <div class="loader__inner">
+      <div class="loader__block"></div>
+      <div class="loader__block"></div>
+      <div class="loader__block"></div>
+      <div class="loader__block"></div>
+    </div>
+  </div>
+
+  <main class="page">
+    <aside class="sidebar">
+      <div id="theme-toggle-container-pc"></div>
+      <h1 class="sidebar__title">2025 Portfolio LANDRU Elliott</h1>
+
+      <ul class="sidebar__links">
+        <li onclick="Navigate(0)" class="sidebar__item sidebar__item--active">
+          <div class="sidebar__link">
+            <div class="sidebar__icon-wrap">
+              <svg class="sidebar__icon" width="35px" height="35px" viewBox="0 0 24 24" fill="none">
+                <path d="M6.5 20V11H3L12 5L21 11H17.5V20H14.5V16.5C14.5 15.6716 13.8284 15 13 15H11C10.1716 15 9.5 15.6716 9.5 16.5V20H6.5Z"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <span class="sidebar__caption">Accueil</span>
+          </div>
+        </li>
+
+        <li onclick="Navigate(1)" class="sidebar__item">
+          <div class="sidebar__link">
+            <div class="sidebar__icon-wrap">
+              <svg class="sidebar__icon" width="28px" height="28px" viewBox="0 0 512 512">
+                <path d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-55.1c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16H128C57.3 320 0 377.3 0 448v16c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-16c0-70.7-57.3-128-128-128z" fill="none" stroke="#FFFFFF" stroke-width="32"/>
+              </svg>
+            </div>
+            <span class="sidebar__caption">Présentation</span>
+          </div>
+        </li>
+
+        <li onclick="Navigate(2)" class="sidebar__item">
+          <div class="sidebar__link">
+            <div class="sidebar__icon-wrap">
+              <svg class="sidebar__icon" width="30px" height="30px" viewBox="0 0 24 24">
+                <path d="M8 6.00067L21 6.00139M8 12.0007L21 12.0015M8 18.0007L21 18.0015M3.5 6H3.51M3.5 12H3.51M3.5 18H3.51M4 6C4 6.27614 3.77614 6.5 3.5 6.5C3.22386 6.5 3 6.27614 3 6C3 5.72386 3.22386 5.5 3.5 5.5C3.77614 5.5 4 5.72386 4 6ZM4 12C4 12.2761 3.77614 12.5 3.5 12.5C3.22386 12.5 3 12.2761 3 12C3 11.7239 3.22386 11.5 3.5 11.5C3.77614 11.5 4 11.7239 4 12ZM4 18C4 18.2761 3.77614 18.5 3.5 18.5C3.22386 18.5 3 18.2761 3 18C3 17.7239 3.22386 17.5 3.5 17.5C3.77614 17.5 4 17.7239 4 18Z"
+                  fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="sidebar__caption">Services</span>
+          </div>
+        </li>
+
+        <li onclick="Navigate(3)" class="sidebar__item">
+          <div class="sidebar__link">
+            <div class="sidebar__icon-wrap">
+              <svg class="sidebar__icon" width="30" height="30" viewBox="0 0 24 24">
+                <path d="M8,6c0,1.1-0.9,2-2,2S4,7.1,4,6s0.9-2,2-2S8,4.9,8,6z"/>
+                <path d="M0,0v19h20V0H0z M18,2v10.8L13.99,8L10,13l-3-3l-5,5.83V2H18z"/>
+                <path d="M24,23H5v-2h17V5h2V23z"/>
+              </svg>
+            </div>
+            <span class="sidebar__caption">Galerie</span>
+          </div>
+        </li>
+
+        <li onclick="Navigate(4)" class="sidebar__item">
+          <div class="sidebar__link">
+            <div class="sidebar__icon-wrap">
+              <svg class="sidebar__icon" height="30px" width="30px" viewBox="0 0 512 512">
+                <path fill="none" stroke="#FFFFFF" stroke-width="2" d="M92.574,294.24V124.336H43.277C19.449,124.336,0,144.213,0,168.467v206.44c0,24.254,19.449,44.133,43.277,44.133h62v45.469c0,3.041,1.824,5.777,4.559,6.932c2.736,1.154,5.957,0.486,8.023-1.641 l49.844-50.76h106.494c23.828,0,43.279-19.879,43.279-44.133v-0.061H172.262C128.314,374.846,92.574,338.676,92.574,294.24z"/>
+                <path fill="none" stroke="#FFFFFF" stroke-width="2" d="M462.717,40H172.26c-27.105,0-49.283,22.59-49.283,50.197v204.037c0,27.61,22.178,50.199,49.283,50.199 h164.668l75.348,76.033c2.399,2.442,6.004,3.172,9.135,1.852c3.133-1.322,5.176-4.434,5.176-7.887v-69.998h36.131 c27.106,0,49.283-22.59,49.283-50.199V90.197C512,62.59,489.822,40,462.717,40z M369.156,280.115H195.92v-24.316h173.236V280.115z M439.058,204.129H195.92v-24.314h243.138V204.129z M439.058,128.143H195.92v-24.315h243.138V128.143z"/>
+              </svg>
+            </div>
+            <span class="sidebar__caption">Me Contacter</span>
+          </div>
+        </li>
+
+        <li class="sidebar__flag">
+          <a href="./index_anglais.html" class="sidebar__flag-link" title="Visit the English version">
+            <img src="./img/Flag2.svg.png" alt="Drapeau Anglais" class="sidebar__flag-image">
+            <span class="sidebar__flag-caption">English Version</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <div class="swiper swiper-area__container mySwiper">
+      <div class="swiper-wrapper swiper-area__wrapper">
+        <div class="swiper-slide swiper-area__slide home">
+          <div class="home__content">
+            <div id="theme-toggle-container-mobile"></div>
+            <h1 class="home__title">Hello! Je m'appelle <span class="home__name">Elliott</span> et</h1>
+            <h2 class="home__subtitle">je suis un <span class="home__profession">Web Developer</span></h2>
+            <p class="home__text">Ayant de solide connaissances dans le domaine de l’informatique, je suis reconnu pour ma rigueur, ma créativité et ma capacité à travailler en équipe. J'ai à cœur de continuer à développer mes compétences tout en apportant de la valeur ajoutée à l'entreprise pour laquelle je travaille.</p>
+            <br><p class="home__note">(PS: Ce site n’est pas encore finalisé et plusieurs éléments restent à améliorer. Merci de votre compréhension et n’hésitez pas à revenir bientôt pour découvrir les nouveautés !)</p>
+            <div class="button-group home__actions">
+              <button onclick="Navigate(4)" class="button-group__button">Me Contacter</button>
+            </div>
+          </div>
+
+          <div class="home__image">
+            <div class="home__corners home__corner--top-right">
+              <hr class="home__line--horizontal">
+              <hr class="home__line--vertical">
+            </div>
+            <img src="./img/moi.webp" alt="Photo de profil Elliott">
+            <div class="home__corners home__corner--bottom-left">
+              <hr class="home__line--horizontal">
+              <hr class="home__line--vertical">
+            </div>
+          </div>
+
+          <p class="home__help">Faites défiler pour la diapositive suivante <strong>-></strong></p>
+        </div>
+
+        <div class="swiper-slide swiper-area__slide about">
+          <h1 class="about__heading">Présentation</h1>
+          <h3 class="about__subtitle">LANDRU Elliott, <span class="home__profession">un ingénieur informatique</span> passionné par l’informatique et le développement web</h3>
+
+          <p class="about__text">
+            Après une année en BUT Réseaux & Télécommunications, j’ai acquis de solides bases dans la configuration et la gestion des infrastructures réseaux (Cisco, CCNA 1, routage, sécurité, etc.).
+            Je suis actuellement en première année de BTS CIEL option A, où j’approfondis mes compétences en électronique, réseaux, informatique embarquée et programmation.
+            En parallèle, je continue à me spécialiser dans le développement web, en maîtrisant les langages essentiels (HTML, CSS, JavaScript, Python) et et maîtrise le C++ pour les applications console et graphiques ainsi que Python pour l’automatisation de tâches.
+            Curieux et motivé, je poursuis l’élargissement de mes compétences au fil de mes expériences.
+          </p>
+
+          <div class="about__layout">
+            <div class="about__table">
+              <ul class="about__list">
+                <li class="about__item"><span class="about__label">Diplôme:</span> Bac générale</li>
+                <li class="about__item"><span class="about__label">Pays:</span> France</li>
+                <li class="about__item"><span class="about__label">Disponibilité:</span> 7j/7j</li>
+                <li class="about__item"><span class="about__label">Age:</span> 20 ans</li>
+                <li class="about__item"><span class="about__label">Tél:</span> 06 21 52 95 65</li>
+                <li class="about__item"><span class="about__label">Mes Langue:</span> Français/ Anglais(B1)/ Espagnol(B1)</li>
+                <li class="about__item about__actions">
+                  <div class="button-group">
+                    <a href="cv_elliott.pdf" class="button-group__pdf" target="_blank">
+                      <svg class="button-group__pdf-icon" fill="#000000" width="30px" height="30px" viewBox="0 0 550.801 550.801">
+                        <g>
+                          <path d="M267.342,414.698c-6.613,0-10.884,0.585-13.413,1.165v85.72c2.534,0.586,6.616,0.586,10.304,0.586c26.818,0.189,44.315-14.576,44.315-45.874C308.738,429.079,292.803,414.698,267.342,414.698z"/>
+                          <path d="M152.837,414.313c-6.022,0-10.104,0.58-12.248,1.16v38.686c2.531,0.58,5.643,0.78,9.903,0.78c15.757,0,25.471-7.973,25.471-21.384C175.964,421.506,167.601,414.313,152.837,414.313z"/>
+                          <path d="M475.095,131.992c-0.032-2.526-0.833-5.021-2.568-6.993L366.324,3.694c-0.021-0.034-0.062-0.045-0.084-0.076c-0.633-0.707-1.36-1.29-2.141-1.804c-0.232-0.15-0.475-0.285-0.718-0.422c-0.675-0.366-1.382-0.67-2.13-0.892c-0.19-0.058-0.38-0.14-0.58-0.192C359.87,0.114,359.037,0,358.203,0H97.2C85.292,0,75.6,9.693,75.6,21.601v507.6c0,11.913,9.692,21.601,21.6,21.601H453.6c11.908,0,21.601-9.688,21.601-21.601V133.202C475.2,132.796,475.137,132.398,475.095,131.992z"/>
+                        </g>
+                      </svg>
+                      Mon CV en PDF
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div id="skill-modal" class="modal skill-modal">
+              <div class="modal__content">
+                <span class="modal__close" onclick="closeSkillModal()">&times;</span>
+                <h2 id="skill-title">Titre</h2>
+                <p id="skill-description">Description</p>
+              </div>
+            </div>
+
+            <div class="skills">
+              <h2 class="skills__heading">Mes Compétences en Programmation :</h2>
+
+              <div class="skills__grid">
+                <div class="skills__column">
+                  <h3>Langages informatiques</h3>
+                  <li class="skills__item skill-item" data-description="HTML (HyperText Markup Language) est le langage standard utilisé pour structurer le contenu des pages web.">
+                    <img src="./img/logo_html.webp" alt="Logo HTML" loading="lazy">
+                    <p>HTML</p>
+                  </li>
+                  <li class="skills__item skill-item" data-description="CSS (Cascading Style Sheets) permet de mettre en forme les pages HTML : couleurs, polices, mise en page et responsive design.">
+                    <img src="./img/logo_css.webp" alt="Logo CSS" loading="lazy">
+                    <p>CSS</p>
+                  </li>
+                  <li class="skills__item skill-item" data-description="JavaScript est un langage de programmation qui rend les pages web interactives et dynamiques.">
+                    <img src="./img/logo_js.webp" alt="Logo JavaScript" loading="lazy">
+                    <p>JavaScript</p>
+                  </li>
+                  <li class="skills__item skill-item" data-description="Python est un langage polyvalent utilisé pour l’automatisation, l’analyse de données, le développement backend et bien plus encore.">
+                    <img src="./img/logo_python.webp" alt="Logo Python" loading="lazy">
+                    <p>Python</p>
+                  </li>
+                  <li class="skills__item skill-item" data-description="C++ est un langage de programmation compilé permettant la programmation sous de multiples paradigmes, dont la programmation procédurale, la programmation orientée objet et la programmation générique.">
+                    <img src="./img/logo_c++.svg" alt="Logo C++" loading="lazy">
+                    <p>C++</p>
+                  </li>
+                </div>
+
+                <div class="skills__divider"></div>
+
+                <div class="skills__column">
+                  <h3>Systèmes d'exploitation</h3>
+                  <li class="skills__item skill-item" data-description="Windows est un système d’exploitation populaire développé par Microsoft, principalement utilisé dans les environnements personnels et professionnels.">
+                    <img src="./img/windows_logo.webp" alt="Logo Windows" loading="lazy">
+                    <p>Windows</p>
+                  </li>
+                  <li class="skills__item skill-item" data-description="Linux est un système d’exploitation open source, apprécié pour sa flexibilité, sa stabilité et sa sécurité, largement utilisé dans les serveurs et le développement.">
+                    <img src="./img/logo_linux.webp" alt="Logo Linux" loading="lazy">
+                    <p>Linux</p>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide swiper-area__slide services">
+          <h1 class="services__heading">Services</h1>
+
+          <div class="services__item">
+            <div class="services__icon"><img src="./img/web-svgrepo-com.svg" alt="logo web"></div>
+            <h2 class="services__item-title">Développeur Web</h2>
+            <p>Création d’interfaces web attractives et intuitives alliant design graphique, ergonomie et performance pour répondre aux besoins des utilisateurs.</p>
+          </div>
+
+          <div class="services__item">
+            <div class="services__icon"><img src="./img/magnifying-glass.svg" alt="logo magnifying-glass"></div>
+            <h2 class="services__item-title">Technicien R&T</h2>
+            <p>Installation, la maintenance et l'organisation des infrastructures physiques, comme les câbles Ethernet, la fibre optique, et les systèmes de connectivité.</p>
+          </div>
+
+          <div class="services__item">
+            <div class="services__icon"><img src="./img/network.svg" alt="logo phone"></div>
+            <h2 class="services__item-title">Administrateur Réseaux</h2>
+            <p>gére, configure, sécurise et maintien les réseaux informatiques d’une entreprise (comme les serveurs, routeurs, commutateurs et connexions Internet).</p>
+          </div>
+
+          <div class="services__item">
+            <div class="services__icon"><img src="./img/database-svgrepo-com.svg" alt="logo database"></div>
+            <h2 class="services__item-title">Administrateur Système</h2>
+            <p>Admin système dans les système d'exploitation Windows et Linux.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide swiper-area__slide gallery">
+          <h1 class="gallery__heading">Galerie</h1>
+
+          <div class="gallery__project" data-description="Mes projets">
+            <img src="./img/programmation.webp" alt="Programmation" loading="lazy">
+            <h2 class="gallery__project-title">Mes Projects</h2>
+          </div>
+
+          <div class="gallery__project" data-description="Je n'ai pas encore d'experience professionnelles 😅.">
+            <img src="./img/image_professionnelle.jpg" alt="photo ski" loading="lazy">
+            <h2 class="gallery__project-title">Mes Experiences professionnelles</h2>
+          </div>
+
+          <div class="gallery__project" data-description="A venir">
+            <img src="./img/ski.webp" alt="mes dessins" loading="lazy">
+            <h2 class="gallery__project-title">Mes Loisirs</h2>
+          </div>
+
+          <img src="img/montagnes.svg" alt="Montagnes" class="gallery__bg" draggable="false">
+        </div>
+
+        <div class="swiper-slide swiper-area__slide contact">
+          <h1 class="contact__heading">Me Contacter</h1>
+
+          <div class="contact__info">
+            <img src="./img/phone-call.svg" alt="logo phone">
+            <h3 class="contact__info-title">Numéro de Téléphone</h3>
+            <p>06.21.52.95.65</p>
+          </div>
+
+          <div class="contact__info">
+            <img src="./img/location-sign.svg" alt="logo local">
+            <h3 class="contact__info-title">Localisation</h3>
+            <p>Haute-Savoie (FRANCE)</p>
+          </div>
+
+          <div class="contact__info">
+            <img src="./img/email.svg" alt="logo email">
+            <h3 class="contact__info-title">Email</h3>
+            <p>elliottlandru@gmail.com</p>
+          </div>
+
+          <div class="contact__info">
+            <img src="./img/world-wide-web.svg" alt="logo web">
+            <h3 class="contact__info-title">Website</h3>
+            <p>https://etoile74.github.io/Portfolio/</p>
+          </div>
+
+          <form id="contactForm" class="contact__form">
+            <h2 class="contact__form-title">
+              Envoyer un message
+              <div class="contact__socials">
+                <a href="https://www.instagram.com/elliott_lnd/" target="_blank" class="contact__social-link">
+                  <picture>
+                    <source type="image/svg" type="image/webp" srcset="./img/instagram.svg">
+                    <img src="./img/instagram.svg" alt="logo insta" class="contact__social-image" loading="lazy">
+                  </picture>
+                </a>
+
+                <a href="https://www.facebook.com/elliott.landru.5/" target="_blank" class="contact__social-link">
+                  <picture>
+                    <source type="image/svg" type="image/png" srcset="./img/2023_Facebook_icon.svg.png">
+                    <img src="./img/2023_Facebook_icon.webp" alt="logo facebook" class="contact__social-image" loading="lazy">
+                  </picture>
+                </a>
+
+                <a href="https://x.com/74_elliott" target="_blank" class="contact__social-link">
+                  <picture>
+                    <source type="image/png" srcset="./img/x-social-media-white-round-icon.webp">
+                    <img src="./img/x-social-media-white-round-icon.webp" alt="logo x" class="contact__social-image" loading="lazy">
+                  </picture>
+                </a>
+
+                <a href="https://github.com/etoile74" target="_blank" class="contact__social-link">
+                  <picture>
+                    <source type="image/png" srcset="./img/github.svg">
+                    <img src="./img/github.svg" alt="logo github" class="contact__social-image" loading="lazy">
+                  </picture>
+                </a>
+              </div>
+            </h2>
+
+            <input type="text" id="name" class="contact__input" placeholder="Nom">
+            <input type="email" id="email" class="contact__input" placeholder="votre email">
+            <textarea id="message" rows="4" class="contact__textarea" placeholder="Tapez votre message ici..."></textarea>
+            <button type="submit" class="contact__submit button-group__primary">Envoyer</button>
+          </form>
+
+          <footer class="footer">
+            <li class="footer__item">© 2026 Portfolio LANDRU Elliott.</li>
+          </footer>
+        </div>
+      </div>
+
+      <div class="mobile-nav">
+        <button id="prev-slide" class="mobile-nav__button">◀</button>
+        <button id="next-slide" class="mobile-nav__button">▶</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="gallery-modal" class="modal gallery-modal">
+    <div class="modal__content">
+      <span id="close-gallery-modal" class="modal__close">&times;</span>
+      <h2 id="gallery-title"></h2>
+      <p id="gallery-description"></p>
+    </div>
+  </div>
+</body>
+</html>
