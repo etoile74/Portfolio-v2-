@@ -1,0 +1,128 @@
+@use "base" as *
+    
+@media (max-width: 1024px)
+  .sidebar
+    display: none
+
+  .swiper-area__container
+    width: 100vw
+
+  .mobile-nav
+    display: flex
+
+  .swiper-area__slide,
+  .home,
+  .services,
+  .gallery,
+  .contact
+    min-height: 100vh
+    height: auto
+    overflow-y: auto
+    padding-bottom: 100px
+
+  .home
+    flex-direction: column
+
+  .home__content
+    padding: 40px
+
+  .home__image
+    width: 50%
+    margin: 20px auto
+
+  .home__corners
+    display: none
+
+  .home__help 
+    display: none
+
+  .about__layout
+    flex-direction: column
+
+  .about__table,
+  .skills__grid
+    width: 100%
+
+  .about,
+  .services,
+  .gallery,
+  .contact
+    padding: 20px
+
+  .services
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+  .gallery
+    grid-template-columns: 1fr
+    justify-items: center
+
+  .gallery__heading,
+  .gallery__title
+    grid-column: 1 / -1
+    font-size: 1.5rem
+
+  .gallery__project
+    width: 80%
+
+  .gallery__bg
+    display: none
+
+  .contact
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+  .contact__form
+    display: flex
+    flex-direction: column
+
+  .contact__input,
+  .contact__textarea
+    width: 100%
+    margin: 10px 0
+
+  .contact__socials
+    margin: 10px auto 0
+
+  .contact__submit
+    width: 50%
+
+@media (max-width: 768px)
+  .home__image
+    width: 80%
+
+  .home__content,
+  .about,
+  .services,
+  .gallery,
+  .contact
+    padding: 40px 20px
+
+  .skills__grid
+    flex-direction: column
+    margin-left: 0
+
+  .skills__divider
+    display: none
+
+@media (max-width: 480px)
+  .home__image
+    width: 100%
+
+  .home__content,
+  .about,
+  .services,
+  .gallery,
+  .contact
+    padding: 20px 10px
+
+  .gallery__project
+    width: 80%
+
+  .home__title
+    font-size: 2.2rem
+
+  .home__subtitle
+    font-size: 1.6rem
